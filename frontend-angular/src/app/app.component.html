@@ -1,0 +1,77 @@
+<div class="page-wrapper">
+
+  <!-- PAGE CONTAINER-->
+  <div class="page-container">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!--  collapse button for small screen -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- logo -->
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" alt="Maple Store" height="30" />
+      </a>
+
+      <!-- search box -->
+      <app-search></app-search>
+
+      <!-- cart button -->
+      <div class="nav-item">
+        <a class="nav-link" href="shopping-detail.html">
+          <i class="bi bi-cart4" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <div class="nav-item">
+            <div class="d-lg-none"> <!-- no display on large screen -->
+              <app-product-category-menu></app-product-category-menu>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MENU SIDEBAR for large screen-->
+    <aside class="menu-sidebar d-none d-lg-block">
+      <div class="logo">
+        <a href="#">
+          <img src="assets/images/logo.png" alt="Maple Store" class="img-responsive" />
+        </a>
+      </div>
+      <app-product-category-menu></app-product-category-menu>
+    </aside>
+
+
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+      <div class="logo">
+        <a href="#">
+          <img src="assets/images/logo.png" alt="Maple Store" class="img-responsive" />
+        </a>
+      </div>
+
+      <app-product-category-menu></app-product-category-menu>
+
+    </aside>
+    <!-- END MENU SIDEBAR-->
+
+    <!-- MAIN CONTENT-->
+    <router-outlet></router-outlet>
+    <!-- END MAIN CONTENT-->
+
+  </div>
+  <!-- END PAGE CONTAINER-->
+</div>
+
+<footer>
+  <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Help</a></li>
+  </ul>
+</footer>

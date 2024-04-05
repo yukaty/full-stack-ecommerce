@@ -1,0 +1,50 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- If there are products -->
+        <div *ngIf="products && products.length > 0; else noProducts">
+          <h4>Category: {{ currentCategoryName }}</h4>
+          <div class="row">
+            <div *ngFor="let product of products" class="col-sm-6 col-md-4 col-lg-3">
+              <div class="product-box">
+                <a routerLink="/products/{{ product.id }}">
+                  <img src="{{ product.imageUrl }}" class="img-fluid">
+                </a>
+                <a routerLink="/products/{{ product.id }}">
+                  <h1>{{ product.name }}</h1>
+                </a>
+                <div class="price">{{ product.unitPrice | currency:'CAD' }}</div>
+                <a href="#" class="primary-btn">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If there are no products -->
+        <ng-template #noProducts>
+          <div class="col-12 alert alert-warning" role="alert">
+            No products found.
+          </div>
+        </ng-template>
+      </div>
+
+      <!-- Pagination -->
+      <div class="footer-pagination row">
+        <div class="d-flex justify-content-center">
+          <ngb-pagination [(page)]="thePageNumber" [pageSize]="thePageSize" [collectionSize]="theTotalElements"
+            [maxSize]="5" (pageChange)="listProducts()">
+          </ngb-pagination>
+        </div>
+        <div class="d-flex justify-content-end">
+          <span class="mx-2">Page Size:</span>
+          <select #myPageSelect (change)="updatePageSize(myPageSelect.value)">
+            <option selected="true">10</option>
+            <option>20</option>
+            <option>50</option>
+          </select>
+        </div>
+      </div>
+      <!-- END Pagination -->
+
+    </div>
+  </div>
