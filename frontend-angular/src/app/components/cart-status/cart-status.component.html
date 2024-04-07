@@ -1,0 +1,7 @@
+<div class="nav-item">
+  <a class="nav-link d-flex align-items-center px-3" routerLink="/cart-details">
+    <i class="fa-solid fa-cart-shopping fs-4 me-2"></i>
+    <span>{{ totalPrice | currency: 'CAD' }}</span>
+    <span class="badge bg-primary ms-2 rounded-pill">{{ totalQuantity }}</span>
+  </a>
+</div>

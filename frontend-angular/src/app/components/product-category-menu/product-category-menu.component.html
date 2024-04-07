@@ -1,15 +1,14 @@
 <div class="menu-sidebar-content js-scrollbar1">
   <nav class="navbar-sidebar">
-      <ul class="list-unstyled navbar-list">
-
-          <li *ngFor="let category of productCategories">
-
-              <a routerLink="/category/{{ category.id }}/{{ category.categoryName }}" routerLinkActive="active-link">
-                  {{ category.categoryName }}
-              </a>
-
-          </li>
-
+    <figure class="d-flex flex-column flex-lg-row">
+      <figcaption class="me-3">Categories: </figcaption>
+      <ul class="list-unstyled navbar-list d-flex flex-column flex-lg-row">
+        <li *ngFor="let category of productCategories" class="me-lg-3">
+          <a routerLink="/category/{{ category.id }}/{{ category.categoryName }}" routerLinkActive="active-link">
+            {{ category.categoryName }}
+          </a>
+        </li>
       </ul>
+    </figure>
   </nav>
 </div>

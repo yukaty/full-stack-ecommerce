@@ -1,12 +1,10 @@
-<div class="form-header">
-
-  <input #userInput type="text"
-         placeholder="Search for products ..."
-         class="au-input au-input-xl"
-         (keyup.enter)="doSearch(userInput.value)"  />
-
-  <button (click)="doSearch(userInput.value)" class="au-btn-submit">
-      Search
-  </button>
-
+<div class="form-header input-group">
+  <input #userInput type="text" placeholder="Search for products ..."
+    class="form-control border-end-0 border rounded-pill" (keyup.enter)="doSearch(userInput.value)" />
+    <span class="input-group-append">
+    <button (click)="doSearch(userInput.value)"
+      class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5">
+      <i class="fa-solid fa-search"></i>
+    </button>
+    </span>
 </div>
