@@ -6,5 +6,6 @@ export const environment = {
     redirectUri: 'https://localhost:4200/login/callback',
     scopes: ['openid', 'profile', 'email']
   },
-  backendApiUrl: "https://localhost:8443/api"
+  backendApiUrl: 'https://localhost:8443/api',
+  stripePublishableKey: '<< STRIPE-PUBLISHABLE-KEY>>'
 };

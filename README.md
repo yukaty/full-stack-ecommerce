@@ -1,4 +1,23 @@
 # full-stack-ecommerce
-Full stack eCommerce project with Spring Boot and Angular. Inspired by a Udemy course, this project expands on the foundational concepts with some updates: I've upgraded to the latest packages, introduced new functionalities, and embraced Docker.
+Full stack eCommerce project with Spring Boot and Angular. Inspired by a Udemy course, this project expands on the foundational eCommerce concepts and it has been enhanced with the latest tech stack updates and the introduction of additional functionalities.
 
-Currently in development.
+## Technologies
+- Backend: Spring Boot 3
+- Frontend: Angular 17
+- Authentication: Okta
+- Payment: Stripe (test mode)
+
+### Local Setup
+
+Backend:
+```
+cd backend-spring-boot
+./mvnw spring-boot:run
+```
+
+Frontend:
+```
+cd frontend-angular
+npm install
+npm start -- --configuration=dev
+```

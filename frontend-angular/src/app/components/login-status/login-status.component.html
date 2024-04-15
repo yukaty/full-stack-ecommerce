@@ -1,15 +1,21 @@
-<div class="login-status-header">
-
-  <div *ngIf="isAuthenticated && userFullName" class="login-status-user-info">
-      Welcome back {{ userFullName }}!
+<div class="d-flex justify-content-center align-items-center">
+  <div *ngIf="isAuthenticated && userFullName" class="me-3">
+      Welcome back, {{ userFullName }}!
   </div>
 
-  <button *ngIf="!isAuthenticated" routerLink="/login" class="security-btn">Login</button>
+  <button *ngIf="!isAuthenticated" routerLink="/login" class="btn btn-secondary me-1">
+    <i class="fas fa-sign-in-alt"></i> Login
+  </button>
 
-  <button *ngIf="isAuthenticated" (click)="logout()" class="security-btn">Logout</button>
-
-  <button *ngIf="isAuthenticated" routerLink="/members" class="security-btn ml-1">Member</button>
-
-  <button *ngIf="isAuthenticated" routerLink="/order-history" class="security-btn ms-1">Orders</button>
-
+  <div *ngIf="isAuthenticated">
+    <button routerLink="/members" class="btn btn-secondary me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Member's Page">
+      <i class="fas fa-user"></i>
+    </button>
+    <button routerLink="/order-history" class="btn btn-secondary me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Order History">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+    </button>
+    <button (click)="logout()" class="btn btn-secondary">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </button>
+  </div>
 </div>
