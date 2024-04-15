@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import { environment } from '../../environments/environment';
 import { Country } from '../common/country';
 import { State } from '../common/state';
 
@@ -11,8 +12,9 @@ import { State } from '../common/state';
 })
 export class MapleStoreFormService {
 
-  private countriesUrl = 'http://localhost:8080/api/countries';
-  private statesUrl = 'http://localhost:8080/api/states';
+
+  private countriesUrl = environment.backendApiUrl + '/countries';
+  private statesUrl = environment.backendApiUrl + '/states';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -60,14 +60,14 @@
               ],
               "outputHashing": "all"
             },
-            "development": {
+            "dev": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
+                  "with": "src/environments/environment.dev.ts"
                 }
               ]
             }
@@ -80,11 +80,11 @@
             "production": {
               "buildTarget": "frontend-angular:build:production"
             },
-            "development": {
-              "buildTarget": "frontend-angular:build:development"
+            "dev": {
+              "buildTarget": "frontend-angular:build:dev"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "dev"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

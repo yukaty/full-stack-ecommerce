@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
+import { environment } from '../../environments/environment';
 import { Product } from '../common/product';
 import { ProductCategory } from '../common/product-category';
 
@@ -9,8 +10,8 @@ import { ProductCategory } from '../common/product-category';
 })
 export class ProductService {
 
-  private baseUrl = 'http://localhost:8080/api/products';         // Products API
-  private categoryUrl = 'http://localhost:8080/api/product-category'; // Product Categories API
+  private baseUrl = environment.backendApiUrl + '/products';              // Products API
+  private categoryUrl = environment.backendApiUrl + '/product-category';  // Product Categories API
 
   constructor(private httpClient: HttpClient) { }
 

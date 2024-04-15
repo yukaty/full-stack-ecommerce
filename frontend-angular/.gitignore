@@ -1,16 +1,17 @@
 # Environment files
-src/environments/*
+src/environments/environment.dev.ts
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+# Security files
+ssl-localhost/localhost.key
+ssl-localhost/localhost.crt
 
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
+
+.angular/
+dist/
 
 # IDEs and editors
 .idea/
@@ -28,15 +29,6 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
-
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
 
 # System files
 .DS_Store
